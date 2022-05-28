@@ -1,24 +1,21 @@
 // TODO: Buatlah data dari kedua user di sini
 // Tentukan tipe data dan struktur data yang menurut kalian tepat
 // Kalian bisa membuat variabel lain untuk dimasukkan ke dalam atribut user agar lebih mudah dibaca
-//SET MONICA
-const colorMonica = ['Yellow', 'Pink', 'White', 'Purple'];
-const setColorMonica = new Set(colorMonica);
-const restoMonica = ['Bento', 'Sushi', 'Pancake', 'Eggy', 'Tempura', 'Bento', 'Eggy', 'Padang', 'Tteok', 'Sushi', 'Sushi'];
-const setRestoMonica = new Set(restoMonica);
+//SET COLORS
+const monicasColor = new Set(['Yellow', 'Pink', 'White', 'Purple']);
+const wendysColor = new Set(['Blue', 'Black', 'Grey']);
 
-//SET WENDY
-const colorWendy = ['Blue', 'Black', 'Grey'];
-const setColorWendy = new Set(colorWendy);
-const restoWendy = ['Tempura', 'Bento', 'Sushi', 'Pancake', 'Padang', 'Katsu', 'Geprek', 'Pancake', 'Eggy'];
-const setRestoWendy = new Set(restoWendy);
+//SET RESTO
+const monicasRestaurant = new Set(['Bento', 'Sushi', 'Pancake', 'Eggy', 'Tempura', 'Bento', 'Eggy', 'Padang', 'Tteok', 'Sushi', 'Sushi']);
+const wendysRestaurant = new Set(['Tempura', 'Bento', 'Sushi', 'Pancake', 'Padang', 'Katsu', 'Geprek', 'Pancake', 'Eggy']);
+
 
 const firstUser = {
-    nama: "Monica",
+    name: "Monica",
     gender: "Female",
     age: 17,
     email: "monica@dingdong.com",
-    faviriteColor: setColorMonica,
+    favoriteColor: [...monicasColor],
     isHavePet: "Yes",
     education: [
         {
@@ -36,16 +33,16 @@ const firstUser = {
             city: "Tangerang"
         }
     ],
-    favouriteRestaurant: setRestoMonica
+    favoriteRestaurant: [...monicasRestaurant]
 };
 
 
 const secondUser = {
-    nama: "Wendy",
+    name: "Wendy",
     gender: "Male",
     age: 23,
     email: "wendy@dingdong.com",
-    faviriteColor: setColorWendy,
+    favoriteColor: [...wendysColor],
     isHavePet: "No",
     education: [
         {
@@ -68,12 +65,13 @@ const secondUser = {
             city: "Tangerang"
         }
     ],
-    favouriteRestaurant: setRestoWendy
+    favoriteRestaurant: [...wendysRestaurant]
 };
 
 // TODO: Masukkan hasil akhir dari kedua user di sini
 const users = [];
-users.push(firstUser, secondUser);
+users.push(firstUser);
+users.push(secondUser)
 
 // ! JANGAN MODIFIKASI LINE DI BAWAH
 function main() {
